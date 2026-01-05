@@ -49,11 +49,11 @@
             <div class="about-col-1">
                 <img src="personal-portfolio-img/images/user.jpeg" alt="profile">
             </div>
+
             <div class="about-col-2">
                 <h1 class="sub-title">About Me</h1>
                 <p>
-                    Java Backend Developer with strong hands-on experience in building scalable, secure, and maintainable backend systems.
-                    Skilled in developing RESTful APIs using Spring Boot, managing relational databases, and following clean architectural principles.
+                    Java Backend Developer with strong hands-on experience in building scalable, secure, and maintainable backend systems using Spring Boot and RESTful APIs.
                 </p>
 
                 <div class="tab-titles">
@@ -65,9 +65,9 @@
                 <div class="tab-contents active-tab" id="skills">
                     <ul>
                         <li><span>Programming</span><br>Java 8, OOPS, Collections, Multithreading</li>
-                        <li><span>Backend Technologies</span><br>Spring Boot, REST APIs, Hibernate, JPA</li>
-                        <li><span>Databases</span><br>MySQL, PostgreSQL</li>
-                        <li><span>Tools & Practices</span><br>Git, GitHub, Postman, JUnit</li>
+                        <li><span>Backend</span><br>Spring Boot, REST APIs, Hibernate, JPA</li>
+                        <li><span>Database</span><br>MySQL, PostgreSQL</li>
+                        <li><span>Tools</span><br>Git, GitHub, Postman, JUnit</li>
                     </ul>
                 </div>
 
@@ -75,11 +75,11 @@
                     <ul>
                         <li>
                             <span>Infosys — System Engineer (2024–2025)</span><br>
-                            Designed and developed REST APIs, resolved production issues, performed debugging, and ensured application stability through testing.
+                            Developed and maintained REST APIs, resolved production issues, and performed debugging and testing.
                         </li>
                         <li>
                             <span>Schneider Electric — Software Trainee (2023–2024)</span><br>
-                            Contributed to backend API development, implemented validations and pagination, and supported unit testing efforts.
+                            Worked on backend API development, validations, pagination, and unit testing.
                         </li>
                     </ul>
                 </div>
@@ -106,17 +106,17 @@
             <div>
                 <i class="fa-solid fa-code"></i>
                 <h2>Backend Development</h2>
-                <p>Development of robust backend applications using Spring Boot with clean, layered architecture.</p>
+                <p>Building scalable backend applications with clean layered architecture.</p>
             </div>
             <div>
                 <i class="fa-solid fa-server"></i>
                 <h2>REST API Development</h2>
-                <p>Design and implementation of secure, scalable, and well-documented RESTful APIs.</p>
+                <p>Designing secure, maintainable, and well-documented APIs.</p>
             </div>
             <div>
                 <i class="fa-solid fa-bug"></i>
                 <h2>Application Support</h2>
-                <p>Production issue analysis, debugging, and performance improvement support.</p>
+                <p>Debugging, issue analysis, and production support.</p>
             </div>
         </div>
     </div>
@@ -131,27 +131,25 @@
             <div class="project-card">
                 <h2>Blog Application</h2>
                 <p>
-                    Developed RESTful APIs using Spring Boot following industry-standard layered architecture.<br>
-                    Implemented CRUD operations, validations, and centralized exception handling.<br>
-                    Integrated MySQL database using Hibernate and JPA for efficient data persistence.
+                    Developed REST APIs using Spring Boot with layered architecture.<br>
+                    Implemented CRUD operations, validations, and exception handling.<br>
+                    Integrated MySQL database using Hibernate and JPA.
                 </p>
             </div>
 
             <div class="project-card">
                 <h2>AHMIS Project</h2>
                 <p>
-                    Built healthcare backend services handling large-scale patient and operational data.<br>
-                    Implemented pagination, filtering, and request validation for optimized performance.<br>
-                    Actively involved in debugging, testing, and API optimization.
+                    Developed healthcare backend services with pagination and validations.<br>
+                    Optimized APIs and handled debugging and testing.
                 </p>
             </div>
 
             <div class="project-card">
                 <h2>Employee Management System</h2>
                 <p>
-                    Designed and developed REST APIs for employee data management.<br>
-                    Used Spring Boot and JPA for database interaction and persistence.<br>
-                    Implemented proper exception handling and unit testing.
+                    Built CRUD-based REST APIs using Spring Boot and JPA.<br>
+                    Implemented exception handling and unit testing.
                 </p>
             </div>
 
@@ -164,6 +162,7 @@
     <div class="container">
         <h1 class="sub-title">Contact Me</h1>
         <div class="contact-row">
+
             <div class="contact-left">
                 <p>
                     <i class="fa-solid fa-envelope"></i>
@@ -188,8 +187,11 @@
                     </a>
                 </div>
 
-            <a href="personal-portfolio-img/images/Shankaragouda_Java_Backend_CV.pdf" download class="btn">
-              </a>
+                <!-- FIXED DOWNLOAD BUTTON -->
+                <a href="personal-portfolio-img/images/Shankaragouda_Java_Backend_CV.pdf"
+                   download
+                   class="btn btn-download">
+                    <i class="fa-solid fa-download"></i>
                     Download CV
                 </a>
             </div>
@@ -202,6 +204,7 @@
                     <button type="submit" class="btn">Send Message</button>
                 </form>
             </div>
+
         </div>
     </div>
 </section>
@@ -228,13 +231,12 @@ function closeMenu(){ sideMenu.style.right = "-200px"; }
 document.addEventListener("DOMContentLoaded", () => {
     const text = "Java Backend Developer";
     let i = 0;
-    const speed = 120;
     const target = document.getElementById("typing-text");
 
     function typeChar() {
         if (i < text.length) {
             target.innerHTML += text.charAt(i++);
-            setTimeout(typeChar, speed);
+            setTimeout(typeChar, 120);
         }
     }
     typeChar();
