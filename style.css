@@ -1,0 +1,327 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#080808;
+    color:#ffffff;
+}
+
+.container{
+    padding:10px 10%;
+}
+
+/* ================= HEADER ================= */
+#header{
+    height:100vh;
+    background:url(personal-portfolio-img/images/background.jpg) center/cover no-repeat;
+}
+
+.header-flex{
+    height:100%;
+    display:flex;
+    flex-direction:column;
+}
+
+/* NAV */
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+/* LOGO */
+.logo{
+    width:140px;
+    background:#ffffff;
+    padding:6px 10px;
+    border-radius:6px;
+}
+
+/* MENU */
+nav ul li{
+    display:inline-block;
+    margin:10px 20px;
+}
+
+nav ul li a{
+    color:#ffffff;
+    text-decoration:none;
+    font-size:18px;
+}
+
+.menu-icon{
+    display:none;
+    font-size:28px;
+    cursor:pointer;
+}
+
+.close-icon{
+    display:none;
+}
+
+/* ================= HEADER TEXT ================= */
+.header-text{
+    flex:1;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+
+/* Intro line */
+.intro-text{
+    font-size:22px;
+    color:#ababab;
+    margin-bottom:6px;
+}
+
+/* NAME – professionally refined (NOT bigger) */
+.name-text{
+    font-size:64px;          /* kept same */
+    font-weight:600;         /* refined from heavy bold */
+    letter-spacing:1px;      /* professional spacing */
+    line-height:1.15;
+    margin-bottom:10px;
+}
+
+/* Role line */
+.role-text{
+    font-size:28px;
+    font-weight:500;
+}
+
+/* Typing highlight */
+#typing-text{
+    color:#2563eb;
+    font-weight:600;
+}
+
+/* ================= ABOUT ================= */
+#about{
+    padding:80px 0;
+    color:#ababab;
+}
+
+.row{
+    display:flex;
+    gap:40px;
+    flex-wrap:wrap;
+}
+
+.about-col-1{
+    flex:1;
+}
+
+.about-col-2{
+    flex:2;
+}
+
+.about-col-1 img{
+    width:100%;
+    border-radius:15px;
+}
+
+.sub-title{
+    font-size:50px;
+    margin-bottom:20px;
+}
+
+/* ================= TABS ================= */
+.tab-titles{
+    display:flex;
+    gap:30px;
+    margin:20px 0;
+}
+
+.tab-links{
+    cursor:pointer;
+    position:relative;
+}
+
+.tab-links::after{
+    content:'';
+    width:0;
+    height:3px;
+    background:#2563eb;
+    position:absolute;
+    left:0;
+    bottom:-6px;
+    transition:0.4s;
+}
+
+.tab-links.active-link::after{
+    width:50%;
+}
+
+.tab-contents{
+    display:none;
+}
+
+.tab-contents.active-tab{
+    display:block;
+}
+
+.tab-contents span{
+    color:#2563eb;
+    font-weight:600;
+}
+
+/* ================= SERVICES & PROJECTS ================= */
+.services-list,
+.portfolio-list{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+    margin-top:40px;
+}
+
+.services-list div,
+.portfolio-list div{
+    background:#262626;
+    padding:30px;
+    border-radius:10px;
+    transition:0.3s;
+}
+
+.services-list div:hover,
+.portfolio-list div:hover{
+    background:#2563eb;
+}
+
+/* Project text */
+.project-card p{
+    margin-top:10px;
+    line-height:1.7;
+    font-size:15px;
+    color:#ababab;
+}
+
+/* ================= CONTACT ================= */
+.contact-row{
+    display:flex;
+    gap:40px;
+    flex-wrap:wrap;
+}
+
+.contact-left,
+.contact-right{
+    flex:1;
+}
+
+form input,
+form textarea{
+    width:100%;
+    padding:14px;
+    margin:12px 0;
+    border-radius:6px;
+    border:1px solid #333;
+    background:#1f1f1f;
+    color:#ffffff;
+    font-size:15px;
+}
+
+form input:focus,
+form textarea:focus{
+    outline:none;
+    border-color:#2563eb;
+    box-shadow:0 0 0 1px #2563eb;
+}
+
+.email-link{
+    color:#ababab;
+    text-decoration:none;
+}
+
+.email-link:hover{
+    color:#2563eb;
+    text-decoration:underline;
+}
+
+.social-icons a{
+    font-size:24px;
+    margin-right:15px;
+    color:#ababab;
+    transition:0.3s;
+}
+
+.social-icons a:hover{
+    color:#2563eb;
+    transform:translateY(-4px);
+}
+
+.btn{
+    display:inline-block;
+    margin-top:20px;
+    padding:12px 30px;
+    background:#2563eb;
+    color:#ffffff;
+    text-decoration:none;
+    border-radius:6px;
+    transition:0.3s;
+}
+
+.btn:hover{
+    background:#1e40af;
+    transform:translateY(-2px);
+}
+
+/* ================= FOOTER ================= */
+.copyright{
+    text-align:center;
+    padding:20px;
+    background:#262626;
+    margin-top:40px;
+}
+
+/* ================= MOBILE ================= */
+@media(max-width:768px){
+
+    .menu-icon{
+        display:block;
+    }
+
+    nav ul{
+        position:fixed;
+        top:0;
+        right:-200px;
+        width:200px;
+        height:100vh;
+        background:#2563eb;
+        padding-top:60px;
+        transition:0.4s;
+    }
+
+    nav ul li{
+        display:block;
+        margin:25px;
+    }
+
+    nav ul li a{
+        color:#ffffff;
+    }
+
+    .close-icon{
+        display:block;
+        position:absolute;
+        top:20px;
+        left:20px;
+        font-size:26px;
+        cursor:pointer;
+    }
+
+    .name-text{
+        font-size:42px;
+        letter-spacing:0.8px;
+    }
+
+    .role-text{
+        font-size:22px;
+    }
+
+    .sub-title{
+        font-size:38px;
+    }
+}

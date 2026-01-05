@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Shankaragouda | Java Backend Developer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ================= HEADER ================= -->
+<header id="header">
+    <div class="container header-flex">
+        <nav>
+            <img src="personal-portfolio-img/images/logo.png" class="logo" alt="logo">
+            <i class="fa-solid fa-bars menu-icon" onclick="openMenu()"></i>
+            <ul id="sideMenu">
+                <li><a href="#header" onclick="closeMenu()">Home</a></li>
+                <li><a href="#about" onclick="closeMenu()">About</a></li>
+                <li><a href="#services" onclick="closeMenu()">Services</a></li>
+                <li><a href="#portfolio" onclick="closeMenu()">Projects</a></li>
+                <li><a href="#contact" onclick="closeMenu()">Contact</a></li>
+                <i class="fa-solid fa-xmark close-icon" onclick="closeMenu()"></i>
+            </ul>
+        </nav>
+
+        <div class="header-text">
+            <p class="intro-text">Hello, it’s me</p>
+            <h1 class="name-text">Shankaragouda</h1>
+            <p class="role-text">
+                And I’m a <span id="typing-text"></span>
+            </p>
+        </div>
+    </div>
+</header>
+
+<!-- ================= ABOUT ================= -->
+<section id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="personal-portfolio-img/images/user.jpeg" alt="profile">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>
+                    Java Backend Developer with strong hands-on experience in building scalable, secure, and maintainable backend systems.
+                    Skilled in developing RESTful APIs using Spring Boot, managing relational databases, and following clean architectural principles.
+                </p>
+
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="openTab(event,'skills')">Skills</p>
+                    <p class="tab-links" onclick="openTab(event,'experience')">Experience</p>
+                    <p class="tab-links" onclick="openTab(event,'education')">Education</p>
+                </div>
+
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>Programming</span><br>Java 8, OOPS, Collections, Multithreading</li>
+                        <li><span>Backend Technologies</span><br>Spring Boot, REST APIs, Hibernate, JPA</li>
+                        <li><span>Databases</span><br>MySQL, PostgreSQL</li>
+                        <li><span>Tools & Practices</span><br>Git, GitHub, Postman, JUnit</li>
+                    </ul>
+                </div>
+
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li>
+                            <span>Infosys — System Engineer (2024–2025)</span><br>
+                            Designed and developed REST APIs, resolved production issues, performed debugging, and ensured application stability through testing.
+                        </li>
+                        <li>
+                            <span>Schneider Electric — Software Trainee (2023–2024)</span><br>
+                            Contributed to backend API development, implemented validations and pagination, and supported unit testing efforts.
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li>
+                            <span>Bachelor of Engineering (2018–2022)</span><br>
+                            VTU University — CGPA: 7.83
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ================= SERVICES ================= -->
+<section id="services">
+    <div class="container">
+        <h1 class="sub-title">My Services</h1>
+        <div class="services-list">
+            <div>
+                <i class="fa-solid fa-code"></i>
+                <h2>Backend Development</h2>
+                <p>Development of robust backend applications using Spring Boot with clean, layered architecture.</p>
+            </div>
+            <div>
+                <i class="fa-solid fa-server"></i>
+                <h2>REST API Development</h2>
+                <p>Design and implementation of secure, scalable, and well-documented RESTful APIs.</p>
+            </div>
+            <div>
+                <i class="fa-solid fa-bug"></i>
+                <h2>Application Support</h2>
+                <p>Production issue analysis, debugging, and performance improvement support.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ================= PROJECTS ================= -->
+<section id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">Projects</h1>
+        <div class="portfolio-list">
+
+            <div class="project-card">
+                <h2>Blog Application</h2>
+                <p>
+                    Developed RESTful APIs using Spring Boot following industry-standard layered architecture.<br>
+                    Implemented CRUD operations, validations, and centralized exception handling.<br>
+                    Integrated MySQL database using Hibernate and JPA for efficient data persistence.
+                </p>
+            </div>
+
+            <div class="project-card">
+                <h2>AHMIS Project</h2>
+                <p>
+                    Built healthcare backend services handling large-scale patient and operational data.<br>
+                    Implemented pagination, filtering, and request validation for optimized performance.<br>
+                    Actively involved in debugging, testing, and API optimization.
+                </p>
+            </div>
+
+            <div class="project-card">
+                <h2>Employee Management System</h2>
+                <p>
+                    Designed and developed REST APIs for employee data management.<br>
+                    Used Spring Boot and JPA for database interaction and persistence.<br>
+                    Implemented proper exception handling and unit testing.
+                </p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section id="contact">
+    <div class="container">
+        <h1 class="sub-title">Contact Me</h1>
+        <div class="contact-row">
+            <div class="contact-left">
+                <p>
+                    <i class="fa-solid fa-envelope"></i>
+                    <a href="mailto:shankrupagad@gmail.com" class="email-link">
+                        shankrupagad@gmail.com
+                    </a>
+                </p>
+
+                <p>
+                    <i class="fa-solid fa-phone"></i>
+                    <a href="tel:+917760693023" class="email-link">
+                        +91 7760693023
+                    </a>
+                </p>
+
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/shanakaragouada/" target="_blank">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/ShankaragoudaTechPro" target="_blank">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                </div>
+
+            <a href="personal-portfolio-img/images/Shankaragouda_Java_Backend_CV.pdf" download class="btn">
+              </a>
+                    Download CV
+                </a>
+            </div>
+
+            <div class="contact-right">
+                <form>
+                    <input type="text" placeholder="Your Full Name" required>
+                    <input type="email" placeholder="Your Email Address" required>
+                    <textarea rows="6" placeholder="Write your message here..." required></textarea>
+                    <button type="submit" class="btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="copyright">
+    © 2026 Shankaragouda Pagad. All Rights Reserved.
+</footer>
+
+<!-- ================= JS ================= -->
+<script>
+function openTab(evt, tabName) {
+    const tabs = document.querySelectorAll(".tab-contents");
+    const links = document.querySelectorAll(".tab-links");
+    tabs.forEach(tab => tab.classList.remove("active-tab"));
+    links.forEach(link => link.classList.remove("active-link"));
+    document.getElementById(tabName).classList.add("active-tab");
+    evt.currentTarget.classList.add("active-link");
+}
+
+let sideMenu = document.getElementById("sideMenu");
+function openMenu(){ sideMenu.style.right = "0"; }
+function closeMenu(){ sideMenu.style.right = "-200px"; }
+
+document.addEventListener("DOMContentLoaded", () => {
+    const text = "Java Backend Developer";
+    let i = 0;
+    const speed = 120;
+    const target = document.getElementById("typing-text");
+
+    function typeChar() {
+        if (i < text.length) {
+            target.innerHTML += text.charAt(i++);
+            setTimeout(typeChar, speed);
+        }
+    }
+    typeChar();
+});
+</script>
+
+</body>
+</html>
